@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>IntCtrl</OutputName>
+          <OutputName>ledCtrl</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -112,7 +112,7 @@
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments>  -MPU</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pCM4</SimDlgDllArguments>
+          <SimDlgDllArguments>-pCM4 -dLaunchPadDLL</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments> -MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Common;.\Mcal\Inc;.\Config</IncludePath>
+              <IncludePath>.\Common;.\Mcal\Inc;.\Config;.\Hal\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -389,6 +389,21 @@
               <FileType>1</FileType>
               <FilePath>.\Mcal\IntCtrl.c</FilePath>
             </File>
+            <File>
+              <FileName>Port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Mcal\Port.c</FilePath>
+            </File>
+            <File>
+              <FileName>Dio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Mcal\Dio.c</FilePath>
+            </File>
+            <File>
+              <FileName>Systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Mcal\Systick.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -405,9 +420,54 @@
           <GroupName>Config</GroupName>
           <Files>
             <File>
-              <FileName>IntCtrl_Lcfg.c</FileName>
+              <FileName>Port_Cfg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Config\IntCtrl_Lcfg.c</FilePath>
+              <FilePath>.\Config\Port_Cfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>IntCtrl_Cfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Config\IntCtrl_Cfg.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Hal</GroupName>
+          <Files>
+            <File>
+              <FileName>Led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hal\Led.c</FilePath>
+            </File>
+            <File>
+              <FileName>Switch.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hal\Switch.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Common</GroupName>
+          <Files>
+            <File>
+              <FileName>Compiler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Common\Compiler.h</FilePath>
+            </File>
+            <File>
+              <FileName>Mcu_Hw.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Common\Mcu_Hw.h</FilePath>
+            </File>
+            <File>
+              <FileName>Platform_Types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Common\Platform_Types.h</FilePath>
+            </File>
+            <File>
+              <FileName>Std_Types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Common\Std_Types.h</FilePath>
             </File>
           </Files>
         </Group>

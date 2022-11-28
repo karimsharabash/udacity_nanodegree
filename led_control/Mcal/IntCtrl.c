@@ -84,16 +84,15 @@ void IntCrtl_Init(void)
 				SET_BIT(NVIC_INTERRUPTS_128_138_ENBALE, IntCrl_Cfg_InterruptsInfo[idx].intNumber);
 			} else
 			{
-				/* Report and error */
+				/* Report an error */
 			}
+			
+			/* Assign Group\Subgroup priority in NVIC_PRIx Nvic and SCB_SYSPRIx Registers*/
 			regAdd = NVIC_PRIX_REG(IntCrl_Cfg_InterruptsInfo[idx].intNumber);
 			*(volatile uint32*) regAdd |= (IntCrl_Cfg_InterruptsInfo[idx].intPri.value << NVIC_PRIX_POS(IntCrl_Cfg_InterruptsInfo[idx].intNumber));
 			
-			
 		}
-	  /*TODO : Assign Group\Subgroup priority in NVIC_PRIx Nvic and SCB_SYSPRIx Registers*/  
-		
-
+	    
 }
 
 /**********************************************************************************************************************

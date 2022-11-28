@@ -27,13 +27,6 @@
 #define HIGH_BYTE_FIRST  0u    /* big endian byte ordering */
 #define LOW_BYTE_FIRST   1u    /* little endian byte ordering */
 
-#ifndef TRUE
-   #define TRUE   1u
-#endif
-
-#ifndef FALSE
-   #define FALSE  0u
-#endif
 
 #define ENABLE    1u
 #define DISABLE   0u
@@ -51,8 +44,8 @@
  *********************************************************************************************************************/
 typedef enum
 {
-	PLATFORM_FALSE = 0,
-	PLATFORM_TRUE  = 1,
+	FALSE = 0,
+	TRUE  = 1,
 } bool;
 
 typedef signed char           sint8;         /*        -128 .. +127            */

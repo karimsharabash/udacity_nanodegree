@@ -1,8 +1,9 @@
-Interrupt_Ctrl/Objects/
-Interrupt_Ctrl/Listings/
-Interrupt_Ctrl/RTE/
-Interrupt_Ctrl/EventRecorderStub.scvd
-Interrupt_Ctrl/IntCtrl.uvguix.lenovo
-Interrupt_Ctrl/IntCtrl.uvoptx
+led_control/Objects/
+led_control/Listings/
+led_control/RTE/
+led_control/EventRecorderStub.scvd
+led_control/IntCtrl.uvguix.lenovo
+led_control/IntCtrl.uvoptx
+
 
 
